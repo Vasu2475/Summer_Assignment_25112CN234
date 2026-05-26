@@ -12,6 +12,7 @@ int main(){
 }
 */
 //Q2. Write a program to print multiplication table of a given number
+/*
 #include <stdio.h>
 int main(){
     int n;
@@ -22,3 +23,38 @@ int main(){
     }
     return 0;
 }
+*/
+//Q3. Write a program to find factorial of a number
+#include <stdio.h>
+int main(){
+    int fact=1, n;
+    printf("Enter the number you wanna find factorial for: ");
+    scanf("%d", &n);
+    for(int i=1; i<=n; i++){
+        fact*=i;
+    }
+    printf("The factorial of %d is %d",n,fact );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
