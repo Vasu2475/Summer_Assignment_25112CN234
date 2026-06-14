@@ -1,4 +1,4 @@
-//WAP to transpose matrix
+//WAP to find row wise sum
 #include <stdio.h>
 int main(){
     int m,n;
@@ -6,24 +6,20 @@ int main(){
     scanf("%d", &m);
     printf("Enter the number of columns: ");
     scanf("%d", &n);
-    int a[m][n], b[n][m];
+    int a[m][n];
     printf("Enter the elements for the matrix:\n");
     for(int i=0; i<m; i++){
         for(int j=0; j<n; j++){
             scanf("%d", &a[i][j]);
         }
     }
-    for(int i=0; i<n; i++){
-        for(int j=0; j<m; j++){
-            b[i][j]=a[j][i];
+    int sum=0;
+    for(int i=0; i<m; i++){
+        for(int j=0; j<n; j++){
+            sum+=a[i][j];
         }
-    }
-    printf("The transposed matrix is:\n");
-    for(int i=0; i<n; i++){
-        for(int j=0; j<m; j++){
-            printf("%d ", b[i][j]);
-        }
-        printf("\n");
+        printf("\nThe sum of the row %d is: %d\n",i+1,sum);
+        sum=0;
     }
     return 0;
-}
+}    
